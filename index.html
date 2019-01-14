@@ -102,8 +102,10 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="BANDERSNATCH.TV" startnode="1" creator="Twine" creator-version="2.2.1" ifid="9F7D1C00-70C6-46D7-848D-134D804B20BB" zoom="0.6" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<div id="store-area" hidden><tw-storydata name="BANDERSNATCH.TV" startnode="4" creator="Twine" creator-version="2.2.1" ifid="9F7D1C00-70C6-46D7-848D-134D804B20BB" zoom="0.6" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 </script><tw-tag name="Init" color="orange"></tw-tag>,<tw-tag name="phase1" color="green"></tw-tag>,<tw-tag name="ending" color="red"></tw-tag>,<tw-tag name="starting" color="yellow"></tw-tag>,<tw-tag name="phase2" color="blue"></tw-tag>,<tw-tag name="phaseGame" color="blue"></tw-tag>,<tw-tag name="FocalPoint" color="purple"></tw-tag>,<tw-tag name="phaseIRL" color="orange"></tw-tag><tw-passagedata pid="1" name="Background" tags="starting" position="20,445" size="200,200">2019, thirty-three years after.
@@ -116,7 +118,7 @@ As both already thought, they were not able to find anything real about it. But 
 
 Now, the package has arrived, Waldo and Michael are ready to start the Bandersnatch live stream. The game night has been already heavily sponsored. All of the followers are all steamed up. The game is beginning.
 
-[[Let&#39;s start|StartingPoint]]</tw-passagedata><tw-passagedata pid="2" name="StartStream" tags="phase1" position="327.6666666666667,523.6666666666667" size="200,100">After a short presentation Michael and Waldo, are ready and the live stream has begun.
+[[Let&#39;s start|StartingPoint]]</tw-passagedata><tw-passagedata pid="2" name="StartStream" tags="phase1" position="327,523" size="200,100">After the classic presentation of their channel, Michael and Waldo are ready to play Bandersnatch and the live stream has just begun.
 
 &lt;&lt;if !$first_passage_package and $first_passage_stream&gt;&gt;\
   [[Open the package|OpenPackage]]
@@ -124,7 +126,7 @@ Now, the package has arrived, Waldo and Michael are ready to start the Bandersna
   [[Continue|ChoosePlayer]]
 &lt;&lt;endif&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="3" name="OpenPackage" tags="phase1" position="746,447.99999999999994" size="200,100">Waldo starts to open the package, while Michael \
+</tw-passagedata><tw-passagedata pid="3" name="OpenPackage" tags="phase1" position="746,447" size="200,100">Waldo starts to open the package, while Michael \
 \
 &lt;&lt;if $first_passage_package&gt;&gt;\
 \
@@ -136,7 +138,7 @@ is describing the objects inside the package.
 \
 &lt;&lt;endif&gt;&gt;\
 
-The package contains a floppy and an heavy box.
+The package contains a floppy and a heavy box.
 
 &lt;&lt;set $first_floppy = false&gt;&gt;\
 &lt;&lt;set $first_box = false&gt;&gt;\
@@ -144,12 +146,12 @@ The package contains a floppy and an heavy box.
 [[Examine the floppy|ExamineFloppy][$first_floppy = true]] 
 [[Open the box|OpenBox][$first_box = true]]
 
-</tw-passagedata><tw-passagedata pid="4" name="StartingPoint" tags="phase1" position="492.6666666666667,277" size="200,100">Everything is settled up, the package is ready to be unboxed and the followers are waiting for the live.
+</tw-passagedata><tw-passagedata pid="4" name="StartingPoint" tags="phase1" position="492,277" size="200,100">Everything is settled up, the package is ready to be unboxed and the followers are waiting for the live stream.
 
 &lt;&lt;set $first_passage_package = false&gt;&gt;\
 &lt;&lt;set $first_passage_stream = false&gt;&gt;\
 [[Start the live stream|StartStream][$first_passage_stream = true]] 
-[[Open the package|OpenPackage][$first_passage_package = true]]</tw-passagedata><tw-passagedata pid="5" name="OpenBox" tags="phase1" position="972.3333333333333,584" size="200,100">The box contains two books: The life of Jerome F. Davies and its book Bandersnatch.
+[[Open the package|OpenPackage][$first_passage_package = true]]</tw-passagedata><tw-passagedata pid="5" name="OpenBox" tags="phase1" position="972,584" size="200,100">The box contains two books: The life of Jerome F. Davies and its book Bandersnatch.
 
 &lt;&lt;set $examined_box = true&gt;&gt;\
 \
@@ -157,16 +159,16 @@ The package contains a floppy and an heavy box.
 [[Examine the floppy|ExamineFloppy]]\
 &lt;&lt;endif&gt;&gt;\
 \
-&lt;&lt;if $first_passage_package&gt;&gt;
-  &lt;&lt;if $examined_floppy and $examined_box&gt;&gt;
+&lt;&lt;if $first_passage_package&gt;&gt;\
+  &lt;&lt;if $examined_floppy and $examined_box&gt;&gt;\
   [[Start the live stream|StartStream]] 
   [[Play Bandersnatch|EndGame][$final=0]]
-  &lt;&lt;endif&gt;&gt;
-&lt;&lt;else&gt;&gt;
-  &lt;&lt;if $examined_floppy and $examined_box&gt;&gt;
+  &lt;&lt;endif&gt;&gt;\
+&lt;&lt;else&gt;&gt;\
+  &lt;&lt;if $examined_floppy and $examined_box&gt;&gt;\
   [[Continue|ChoosePlayer]]
-  &lt;&lt;endif&gt;&gt;
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="ExamineFloppy" tags="phase1" position="693,598" size="200,100">A writing appears on it, the writing has been do with the marker and it seems damaged. On it, Michael can barely recognize &quot;Band&quot; and &quot;natch&quot;. It seems very old.
+  &lt;&lt;endif&gt;&gt;\
+&lt;&lt;endif&gt;&gt;\</tw-passagedata><tw-passagedata pid="6" name="ExamineFloppy" tags="phase1" position="693,598" size="200,100">A old, small writing appears on it, it has been done with the marker and it seems damaged. On it, Michael can barely recognize &quot;Band&quot; and &quot;natch&quot;. It seems very old.
 
 &lt;&lt;set $examined_floppy = true&gt;&gt;\
 &lt;&lt;if !$first_box&gt;&gt;\
@@ -181,13 +183,13 @@ The package contains a floppy and an heavy box.
   &lt;&lt;if $examined_floppy and $examined_box&gt;&gt;\
   [[Continue|ChoosePlayer]]
   &lt;&lt;endif&gt;&gt;\
-&lt;&lt;endif&gt;&gt;\</tw-passagedata><tw-passagedata pid="7" name="Iceberg" tags="phaseGame" position="489.00000000000006,924.1666666666669" size="200,100">&lt;&lt;if $returns is 0&gt;&gt;\
+&lt;&lt;endif&gt;&gt;\</tw-passagedata><tw-passagedata pid="7" name="Iceberg" tags="phaseGame" position="489,924" size="200,100">&lt;&lt;if $returns is 0&gt;&gt;\
   While $player has started to play, $notplayer is describing the books.
   The ones once contained in the package.
-  Immediatly, $player faces the first choice:
   
+  Immediately, $player faces the first choice:
 &lt;&lt;endif&gt;&gt;\
-You&#39;re finding yourself on a iceberg, 
+You&#39;re finding yourself on an iceberg, 
 what do you wanna do?
 
 &lt;&lt;if $returns is 0&gt;&gt;\
@@ -197,21 +199,21 @@ what do you wanna do?
   [[Continue to explore|Crossroad]] 
 &lt;&lt;else&gt;&gt;\
   [[Continue to explore|EndGame][$final = 2]]
-&lt;&lt;endif&gt;&gt;\</tw-passagedata><tw-passagedata pid="8" name="WhiteBear" tags="phaseGame" position="625,1072.5000000000002" size="200,100">A wild White Bear appears
+&lt;&lt;endif&gt;&gt;\</tw-passagedata><tw-passagedata pid="8" name="WhiteBear" tags="phaseGame" position="625,1072" size="200,100">A wild White Bear appears
 What&#39;s your move?
 
 [[Back off|Iceberg][$returns += 1]] 
-[[Kill the bear|Cave][$animal=&quot;White Bear&quot;]]</tw-passagedata><tw-passagedata pid="9" name="BlueWhale" tags="phaseGame" position="355.3333333333334,1075.5" size="200,100">A wild Blue Whale appears
+[[Kill the bear|Cave][$animal=&quot;White Bear&quot;]]</tw-passagedata><tw-passagedata pid="9" name="BlueWhale" tags="phaseGame" position="355,1075" size="200,100">A wild Blue Whale appears
 What&#39;s your move?
 
 [[Back off|Iceberg][$returns += 1]] 
-[[Fight the whale|Cave][$animal=&quot;Blue Whale&quot;]]</tw-passagedata><tw-passagedata pid="10" name="Pax" tags="phaseGame" position="367.00000000000017,1262.833333333333" size="200,100">From the darkness appears PAX, the demon.
+[[Fight the whale|Cave][$animal=&quot;Blue Whale&quot;]]</tw-passagedata><tw-passagedata pid="10" name="Pax" tags="phaseGame" position="367,1262" size="200,100">From the darkness appears PAX, the demon.
 
 Puny Human!!!
 Will you worship me?
 
 [[Deny PAX|GameCrashes]]
-[[Worship PAX|DoorbellRings]]</tw-passagedata><tw-passagedata pid="11" name="EndGame" tags="ending" position="1556.6666666666667,1048.5" size="200,200">&lt;&lt;if $final == 0&gt;&gt;\
+[[Worship PAX|DoorbellRings]]</tw-passagedata><tw-passagedata pid="11" name="EndGame" tags="ending" position="1556,1048" size="200,200">&lt;&lt;if $final == 0&gt;&gt;\
   Michael and Waldo start to play the game. The game is so immersive to completely forgot to start the live stream.
 
   You reach 0 views.
@@ -228,7 +230,7 @@ Will you worship me?
   In the middle of the action Michael and Waldo cut off the live stream.
   
   You reach 0 views
-&lt;&lt;endif&gt;&gt;\</tw-passagedata><tw-passagedata pid="12" name="Crossroad" tags="phaseGame" position="796.6666666666664,804.1666666666669" size="200,100">&lt;&lt;if $returns is 0&gt;&gt;\
+&lt;&lt;endif&gt;&gt;\</tw-passagedata><tw-passagedata pid="12" name="Crossroad" tags="phaseGame" position="796,804" size="200,100">&lt;&lt;if $returns is 0&gt;&gt;\
 Now is time for the second choice:
 
 &lt;&lt;endif&gt;&gt;\
@@ -236,50 +238,51 @@ You&#39;re at the crossroad...
 Where&#39;re you headed to??
 
 [[Go left|WhiteBear]]
-[[Explore right|Igloo]]</tw-passagedata><tw-passagedata pid="13" name="Igloo" tags="phaseGame" position="904.9999999999999,1110.8333333333335" size="200,100">In the distance, you can see an igloo.
+[[Explore right|Igloo]]</tw-passagedata><tw-passagedata pid="13" name="Igloo" tags="phaseGame" position="904,1110" size="200,100">In the distance, you can see an igloo.
 
 [[Reach the igloo|Cave][$igloo = true]]
-[[Go back|Iceberg][$returns += 1]]</tw-passagedata><tw-passagedata pid="14" name="GameCrashes" tags="phaseIRL" position="626.6666666666666,1370.833333333334" size="200,100">The game crashes.
+[[Go back|Iceberg][$returns += 1]]</tw-passagedata><tw-passagedata pid="14" name="GameCrashes" tags="phaseIRL" position="626,1370" size="200,100">The game crashes.
 
-In the meantime a Twitch donation is made. 
+In the meantime, a Twitch donation is made. 
 Waldo and Michael can hear - Donation by PAX: &quot;Wrong choice, you fools.&quot; -
 
 [[Quite the live stream|EndGame][$final = 3]]
-[[Restart the game and worship PAX|Pax]]</tw-passagedata><tw-passagedata pid="15" name="DoorbellRings" tags="phaseIRL" position="292.3333333333334,1413.5" size="200,100">A Twitch donation is made.
+[[Restart the game and worship PAX|Pax]]</tw-passagedata><tw-passagedata pid="15" name="DoorbellRings" tags="phaseIRL" position="292,1413" size="200,100">A Twitch donation is made.
 Waldo and Michael can hear - Donation by PAX: &quot;Fool humans, you unleashed me&quot; -.
 
 Something bad is going to happen. They can feel it.
 
-In the meantime the doorbell is ringing.
+In the meantime, the doorbell is ringing.
 
 [[Waldo goes to the door|Door][$playerDoor = &quot;Waldo&quot;;$notPlayerDoor = &quot;Michael&quot;]]
-[[Michael goes to the door|Door][$playerDoor = &quot;Michael&quot;;$notPlayerDoor = &quot;Waldo&quot;]]</tw-passagedata><tw-passagedata pid="16" name="ChoosePlayer" tags="FocalPoint" position="498.3333333333332,784.1666666666669" size="200,100">Both Michael and Waldo want to play the game. Who&#39;s gonna playing? 
+[[Michael goes to the door|Door][$playerDoor = &quot;Michael&quot;;$notPlayerDoor = &quot;Waldo&quot;]]</tw-passagedata><tw-passagedata pid="16" name="ChoosePlayer" tags="FocalPoint" position="498,784" size="200,100">Both Michael and Waldo want to play the game. Who&#39;s gonna playing? 
 &lt;&lt;set $returns = 0&gt;&gt;\
 
 [[Vote for Michael!|Iceberg][$player = &quot;Michael&quot;;$notplayer = &quot;Waldo&quot;]]
-[[Vote for Waldo!|Iceberg][$player = &quot;Waldo&quot;;$notplayer = &quot;Michael&quot;]]</tw-passagedata><tw-passagedata pid="17" name="UnleashPax" tags="phaseIRL" position="699.6666666666665,1510.166666666666" size="200,100">&lt;&lt;if $spyDoor&gt;&gt;
+[[Vote for Waldo!|Iceberg][$player = &quot;Waldo&quot;;$notplayer = &quot;Michael&quot;]]</tw-passagedata><tw-passagedata pid="17" name="UnleashPax" tags="phaseIRL" position="699,1510" size="200,100">&lt;&lt;if $spyDoor&gt;&gt;
   $playerDoor snitches through the peephole. He doesn&#39;t see anything.
-  In the other room $notPlayerDoor hears - Donation by PAX: &quot;I demand blood&quot;. -
+  In the other room, $notPlayerDoor hears - Donation by PAX: &quot;I demand blood&quot;. -
   
-  [[Give him blood!!|EndGame][$final = 2;$victim = playerDoor;$killer = $notPlayerDoor]] 
-  [[Give him blood!!|EndGame][$final = 2;$victim = playerDoor;$killer = $notPlayerDoor]] 
+  [[Give him blood!!|EndGame][$final = 2;$victim = $playerDoor;$killer = $notPlayerDoor]] 
+  [[Give him blood!!|EndGame][$final = 2;$victim = $playerDoor;$killer = $notPlayerDoor]] 
 &lt;&lt;endif&gt;&gt;
 &lt;&lt;if $openDoor&gt;&gt;
   $playerDoor opens the door. No one is there.
-  $playerDoor can hear a voice from the inside : - I demand blood -.
+  $playerDoor can hear a deep voice inside its mind : - I&#39;m PAX and I demand blood -.
   
   [[Give him blood!!|EndGame][$final = 2;$victim = $notPlayerDoor;$killer = $playerDoor]] 
   [[Give him blood!!|EndGame][$final = 2;$victim = $notPlayerDoor;$killer = $playerDoor]] 
 &lt;&lt;endif&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="18" name="Cave" tags="phaseGame" position="598.3333333333333,1225.8333333333335" size="200,100">&lt;&lt;if !$igloo&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="18" name="Cave" tags="phaseGame" position="598,1225" size="200,100">&lt;&lt;if !$igloo&gt;&gt;\
   Fighting with the $animal you fell unconscious.
-  At your awakening you noticed yourself alone in the dark, probably in a cave.
+  At your awakening, you noticed yourself alone in the dark, probably in a cave.
 &lt;&lt;else&gt;&gt;\
   Walking to the igloo you fell unconscious.
-  At your awakening you noticed yourself alone in the dark. probably in a cave.
+  At your awakening, you noticed yourself alone in the dark. probably in a cave.
 &lt;&lt;endif&gt;&gt;\
-[[Continue|Pax]] </tw-passagedata><tw-passagedata pid="19" name="Door" tags="phaseIRL" position="434.99999999999994,1562.5000000000005" size="200,100">$playerDoor approaches the door.
+
+[[Continue|Pax]] </tw-passagedata><tw-passagedata pid="19" name="Door" tags="phaseIRL" position="434,1562" size="200,100">$playerDoor approaches the door.
 
 [[Open the door|UnleashPax][$openDoor = true]]
 [[Spy through the door|UnleashPax][$spyDoor = true]]</tw-passagedata></tw-storydata></div>
