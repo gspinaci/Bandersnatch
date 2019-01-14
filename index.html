@@ -102,9 +102,11 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="BANDERSNATCH.TV" startnode="4" creator="Twine" creator-version="2.2.1" ifid="9F7D1C00-70C6-46D7-848D-134D804B20BB" zoom="0.6" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<div id="store-area" hidden><tw-storydata name="BANDERSNATCH.TV" startnode="1" creator="Twine" creator-version="2.2.1" ifid="9F7D1C00-70C6-46D7-848D-134D804B20BB" zoom="0.6" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -241,12 +243,12 @@ Where&#39;re you headed to??
 [[Explore right|Igloo]]</tw-passagedata><tw-passagedata pid="13" name="Igloo" tags="phaseGame" position="904,1110" size="200,100">In the distance, you can see an igloo.
 
 [[Reach the igloo|Cave][$igloo = true]]
-[[Go back|Iceberg][$returns += 1]]</tw-passagedata><tw-passagedata pid="14" name="GameCrashes" tags="phaseIRL" position="626,1370" size="200,100">The game crashes.
+[[Go back|Iceberg][$returns += 1]]</tw-passagedata><tw-passagedata pid="14" name="GameCrashes" tags="phaseIRL" position="624.3333333333334,1370" size="200,100">The game crashes.
 
 In the meantime, a Twitch donation is made. 
 Waldo and Michael can hear - Donation by PAX: &quot;Wrong choice, you fools.&quot; -
 
-[[Quite the live stream|EndGame][$final = 3]]
+[[Quit the live stream|EndGame][$final = 3]]
 [[Restart the game and worship PAX|Pax]]</tw-passagedata><tw-passagedata pid="15" name="DoorbellRings" tags="phaseIRL" position="292,1413" size="200,100">A Twitch donation is made.
 Waldo and Michael can hear - Donation by PAX: &quot;Fool humans, you unleashed me&quot; -.
 
@@ -263,15 +265,15 @@ In the meantime, the doorbell is ringing.
   $playerDoor snitches through the peephole. He doesn&#39;t see anything.
   In the other room, $notPlayerDoor hears - Donation by PAX: &quot;I demand blood&quot;. -
   
-  [[Give him blood!!|EndGame][$final = 2;$victim = $playerDoor;$killer = $notPlayerDoor]] 
-  [[Give him blood!!|EndGame][$final = 2;$victim = $playerDoor;$killer = $notPlayerDoor]] 
+  [[Give him blood!!|EndGame][$final = 1;$victim = $playerDoor;$killer = $notPlayerDoor]] 
+  [[Give him blood!!|EndGame][$final = 1;$victim = $playerDoor;$killer = $notPlayerDoor]] 
 &lt;&lt;endif&gt;&gt;
 &lt;&lt;if $openDoor&gt;&gt;
   $playerDoor opens the door. No one is there.
   $playerDoor can hear a deep voice inside its mind : - I&#39;m PAX and I demand blood -.
   
-  [[Give him blood!!|EndGame][$final = 2;$victim = $notPlayerDoor;$killer = $playerDoor]] 
-  [[Give him blood!!|EndGame][$final = 2;$victim = $notPlayerDoor;$killer = $playerDoor]] 
+  [[Give him blood!!|EndGame][$final = 1;$victim = $notPlayerDoor;$killer = $playerDoor]] 
+  [[Give him blood!!|EndGame][$final = 1;$victim = $notPlayerDoor;$killer = $playerDoor]] 
 &lt;&lt;endif&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="18" name="Cave" tags="phaseGame" position="598,1225" size="200,100">&lt;&lt;if !$igloo&gt;&gt;\
